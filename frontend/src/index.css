@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* LIGHT THEME (default) */
+:root {
+  --bg-main: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --primary: #2563eb;
+}
+
+/* DARK THEME */
+body[data-theme="dark"] {
+  --bg-main: #0f172a;
+  --bg-card: #1e293b;
+  --text-main: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --primary: #3b82f6;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 12px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: var(--bg-card);
+  color: var(--text-main);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+:root {
+  --login-bg-light: linear-gradient(135deg, #e2e8f0, #f8fafc);
+  --login-card-bg: #ffffff;
+  --login-text: #111827;
+  --login-subtext: #6b7280;
+  --login-input-bg: #f9fafb;
+}
+
+body[data-theme="dark"] {
+  --login-bg-light: radial-gradient(circle at left, #0b1c2d 0%, #05070d 45%, #000 100%);
+  --login-card-bg: #1e293b;
+  --login-text: #f1f5f9;
+  --login-subtext: #cbd5e1;
+  --login-input-bg: #0f172a;
+}

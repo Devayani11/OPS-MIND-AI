@@ -1,0 +1,42 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 230px;
+  background: var(--bg-card);
+  color: var(--text-main);
+  padding: 25px;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sidebar p {
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.sidebar p:hover {
+  color: var(--primary);
+}
+
+/* MAIN CONTENT */
+.admin-content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* CARDS */
+.card {
+  background: var(--bg-card);
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  color: var(--text-main);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}

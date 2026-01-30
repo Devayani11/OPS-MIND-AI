@@ -1,0 +1,106 @@
+/* CHAT CONTAINER */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--bg-card);
+  color: var(--text-main);
+}
+
+/* HEADER */
+.chat-header {
+  padding: 15px;
+  background-color: var(--bg-main);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* MESSAGES AREA */
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: var(--bg-main);
+}
+
+/* MESSAGE BUBBLES */
+.chat-message {
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  border-radius: 20px;
+  max-width: 70%;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+/* Employee message (right side) */
+.chat-message.employee {
+  background-color: var(--primary);
+  color: #fff;
+  align-self: flex-end;
+}
+
+/* AI message (left side) */
+.chat-message.ai {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: var(--text-main);
+  align-self: flex-start;
+}
+
+/* INPUT AREA */
+.chat-input {
+  display: flex;
+  padding: 12px;
+  background-color: var(--bg-card);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  margin-right: 10px;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+.chat-input input::placeholder {
+  color: var(--text-secondary);
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.chat-input button:hover {
+  opacity: 0.9;
+}
+
+/* Scrollbar */
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
