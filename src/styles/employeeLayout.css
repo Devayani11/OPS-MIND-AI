@@ -1,0 +1,67 @@
+.global-menu-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 22px;
+  background: #111;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.employee-main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+}
+
+.employee-layout {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.employee-main {
+  flex: 1;               /* fill remaining width */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #0f0f0f;
+  transition: margin-left 0.3s ease-in-out; /* smooth shift when sidebar opens */
+}
+
+/* On large screens, shift main area when sidebar opens */
+@media (min-width: 1025px) {
+  .employee-sidebar.open + .employee-main {
+    margin-left: 260px; /* same as sidebar width */
+  }
+}
+
+/* Mobile overlay behavior */
+@media (max-width: 768px) {
+  .employee-sidebar {
+    position: fixed;
+    z-index: 1200;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .employee-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .global-menu-btn {
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    padding: 6px 10px;
+  }
+}

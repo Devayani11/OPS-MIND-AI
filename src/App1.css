@@ -1,0 +1,126 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== APP LAYOUT ===== */
+.app-layout {
+  display: flex;
+  height: 100vh;
+  background-color: #0b1220; /* main dark background */
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 240px;
+  background-color: #020617;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+/* Remove underline from all links in sidebar */
+.sidebar a {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* keeps existing text color */
+}
+
+/* Sidebar Buttons */
+.sidebar-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: background 0.2s ease;
+}
+
+.sidebar-btn:hover {
+  background-color: #1e293b;
+}
+
+.sidebar-btn.active {
+  background-color: #2563eb;
+}
+
+/* Logout Button */
+.sidebar-logout {
+  margin-top: auto;
+  background-color: #ef4444;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sidebar-logout:hover {
+  background-color: #dc2626;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  background-color: #0b1220;
+}
+
+/* ===== COMMON HEADINGS ===== */
+h1, h2, h3 {
+  color: #f9fafb;
+  margin-bottom: 10px;
+}
+
+.welcome {
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+/* ===== COMMON CARDS (optional reuse) ===== */
+.card {
+  background-color: #020617;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+/* ===== PRIMARY BUTTON ===== */
+.primary-btn {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background-color: #2563eb;
+}
+/* Force remove underline from NavLink in all states */
+.sidebar a,
+.sidebar a:visited,
+.sidebar a:hover,
+.sidebar a:active {
+  text-decoration: none !important;
+  color: white;
+}

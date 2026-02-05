@@ -1,0 +1,62 @@
+.employee-sidebar {
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(180deg, #0f172a, #0b1220);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile toggle support */
+.employee-sidebar:not(.open) {
+  transform: translateX(-100%);
+}
+
+.sidebar-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.new-chat-btn {
+  background: #2563eb;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.chat-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat-item {
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 6px;
+  background: #1e293b;
+}
+
+.chat-item:hover {
+  background: #334155;
+}
+
+.logout-btn {
+  margin-top: auto;
+  background: #dc2626;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}

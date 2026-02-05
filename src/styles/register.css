@@ -1,0 +1,78 @@
+/* FULL PAGE CENTER */
+.register-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--login-bg-light); /* changes with theme */
+  font-family: "Inter", sans-serif;
+}
+
+/* CARD BOX */
+.register-box {
+  background: var(--login-card-bg);
+  padding: 40px;
+  width: 360px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: var(--login-text);
+}
+
+/* TITLE */
+.register-box h2 {
+  margin-bottom: 20px;
+  color: var(--login-text);
+}
+
+/* INPUTS + SELECT */
+.register-box input,
+.register-box select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s, background 0.2s;
+  background: var(--login-input-bg);
+  color: var(--login-text);
+}
+
+.register-box input:focus,
+.register-box select:focus {
+  border-color: #667eea;
+  background: #ffffff;
+}
+
+/* BUTTON */
+.register-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #667eea, #5a67d8);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.register-box button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* LOGIN TEXT */
+.register-box p {
+  margin-top: 18px;
+  font-size: 14px;
+  color: var(--login-subtext);
+  cursor: pointer;
+}
+
+.register-box p:hover {
+  color: var(--primary);
+}

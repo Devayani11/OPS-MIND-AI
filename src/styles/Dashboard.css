@@ -1,0 +1,110 @@
+/* ===== Dashboard Layout ===== */
+.dashboard {
+  margin-left: 220px;   /* sidebar width */
+  padding: 30px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #020617, #0b1220);
+}
+
+
+/* ===== Title ===== */
+.dashboard-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #e5e7eb;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Grid ===== */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/* ===== KPI Cards ===== */
+.dashboard-card {
+  background: linear-gradient(145deg, #020617, #111827);
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  color: #f9fafb;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect */
+.dashboard-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Glow line */
+.dashboard-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(59, 130, 246, 0.25),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dashboard-card:hover::before {
+  opacity: 1;
+}
+
+/* ===== Card Content ===== */
+.dashboard-card h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.dashboard-card p {
+  font-size: 34px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* ===== Status Badge ===== */
+.status-badge {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 20px;
+  }
+
+  .dashboard-title {
+    font-size: 24px;
+  }
+
+  .dashboard-card p {
+    font-size: 28px;
+  }
+  .dashboard-heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+}
